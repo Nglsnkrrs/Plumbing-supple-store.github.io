@@ -1,0 +1,427 @@
+/* Медиазапросы для адаптивной верстки */
+
+/* Для планшетов (от 768px до 1024px) */
+@media (max-width: 1331px) {
+    .container {
+        max-width: 95%;
+        padding: 0 15px;
+    }
+    
+}
+
+/* Для мобильных (до 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    /* Верхнее меню */
+    .header__top {
+        display: none;
+    }
+
+    .header__middle {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .header__logo {
+        width: 120px;
+    }
+
+    .header__middle-right {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .text__right {
+        text-align: center;
+    }
+
+    /* Основное меню */
+    .menu__bottom {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .menu__bottom-list {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .menu__bottom-item__sales {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .menu__bottom-item {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .cart {
+        align-self: flex-end;
+        margin-right: 20px;
+    }
+
+    /* Слайдер */
+    .swiper {
+        height: 400px;
+    }
+
+    .header__main-text {
+        padding-top: 150px;
+        text-align: center;
+    }
+
+    .header__main-title {
+        font-size: 32px;
+        margin: 0 auto 20px;
+    }
+
+    .header__main-description {
+        margin: 0 auto 30px;
+    }
+
+    /* Галлерея */
+    .gallery {
+        padding-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .gallery__row--top,
+    .gallery__row--bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery__text {
+        padding: 0 20px;
+    }
+
+    /* Акции */
+    .sales__top {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .sales__title {
+        font-size: 32px;
+        padding-top: 40px;
+    }
+
+    .sales__btn {
+        margin: 0 0 20px 0;
+    }
+
+    .sales__text-title {
+        font-size: 16px;
+    }
+
+    .sales__item {
+        margin-bottom: 40px;
+    }
+
+    /* О компании */
+    .about__title {
+        font-size: 32px;
+    }
+
+    .big {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .big img {
+        width: 100%;
+        height: auto;
+    }
+
+    .small {
+        justify-content: center;
+        padding-top: 30px;
+    }
+
+    .small-inner {
+        padding: 15px 15px 15px 0;
+    }
+
+    .small-inner img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Форма */
+    .form {
+        height: auto;
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .form__title {
+        font-size: 32px;
+    }
+
+    .inputs {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form__input-name,
+    .form__input-phone {
+        max-width: 100%;
+    }
+
+    .form__btn {
+        margin: 20px auto;
+    }
+
+    /* Футер */
+    .footer {
+        padding-top: 40px;
+    }
+
+    .footer__items {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .connection {
+        grid-column: span 1;
+    }
+
+    .info {
+        grid-template-rows: auto;
+        gap: 30px;
+    }
+
+    .whatsapp {
+        justify-content: center;
+    }
+
+    .connection__input {
+        flex-direction: column;
+        background: none;
+    }
+
+    .connection__btn {
+        position: static;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .connection__input input {
+        width: 100%;
+        background-color: #F3F5F7;
+        margin-bottom: 10px;
+        padding: 0 20px;
+    }
+
+    .container__items-footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    /* Модальное окно */
+    .modal__box {
+        max-width: 90%;
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .modal__box-title {
+        font-size: 24px;
+    }
+
+    .modal__butn {
+        width: 100%;
+    }
+
+    /* Поиск */
+    .search-results {
+        position: fixed;
+        top: 120px;
+        left: 10px;
+        right: 10px;
+        width: auto;
+    }
+
+    /* Корзина */
+    .cart-popup {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        max-height: 70vh;
+        border-radius: 20px 20px 0 0;
+    }
+}
+
+/* Для маленьких мобильных (до 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    /* Слайдер */
+    .swiper {
+        height: 300px;
+    }
+
+    .header__main-text {
+        padding-top: 100px;
+    }
+
+    .header__main-title {
+        font-size: 24px;
+    }
+
+    .header__main-description {
+        font-size: 14px;
+    }
+
+    /* Акции */
+    .sales__title,
+    .about__title,
+    .form__title {
+        font-size: 24px;
+    }
+
+    .sales__circle {
+        left: 20px;
+        top: 80px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .sales__percent {
+        font-size: 32px;
+    }
+
+    .sales__text {
+        font-size: 18px;
+    }
+
+    .sales_text-2 {
+        font-size: 20px;
+        left: 20px;
+    }
+
+    /* О компании */
+    .about__title-description {
+        font-size: 18px;
+    }
+
+    /* Кнопки */
+    .btn,
+    .button__right,
+    .modal__butn,
+    .form__btn,
+    .connection__btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Телефон */
+    .phone,
+    .connection__phone {
+        font-size: 18px;
+    }
+
+    /* Счетчик корзины */
+    .cart-counter {
+        width: 100%;
+    }
+}
+
+/* Для очень маленьких экранов (до 320px) */
+@media (max-width: 320px) {
+    .gallery__text {
+        padding: 0 10px;
+        bottom: 15px;
+    }
+
+    .gallery__title {
+        font-size: 18px;
+    }
+
+    .header__main-title {
+        font-size: 20px;
+    }
+
+    .sales__circle {
+        left: 10px;
+        top: 60px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .sales__percent {
+        font-size: 24px;
+    }
+
+    .sales__text {
+        font-size: 14px;
+    }
+}
+
+/* Для ландшафтной ориентации на мобильных */
+@media (max-height: 600px) and (orientation: landscape) {
+    .header__main-text {
+        padding-top: 100px;
+    }
+
+    .swiper {
+        height: 350px;
+    }
+
+    .modal__box {
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+}
+
+/* Для высоких экранов (более 1200px) */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .container__sales {
+        max-width: 1560px;
+    }
+}
+
+/* Для печати */
+@media print {
+    .header,
+    .footer,
+    .sales__btn,
+    .form,
+    .modal,
+    .cart,
+    .search {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+}

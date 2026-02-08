@@ -1,0 +1,460 @@
+.catalog__top{
+    padding-top: 25px;
+}
+.nav-unactive{
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(0, 7, 45, 0.5);
+}
+.nav-active{
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(0, 7, 45, 0.8);
+}
+.catalog__top-items span{
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(0, 7, 45, 0.5);
+}
+.catalog__top-items{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.catalog__top-title{
+    font-size: 46px;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    color: #122952;
+    margin-bottom: 40px;
+}
+.catalog__top-typeEl{
+    display: flex;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+.catalog__top-element{
+    padding: 20px 30px 25px 30px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+
+}
+.catalog__top-element:hover{
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+.catalog__top-element__img{
+    margin-bottom: 15px;
+}
+.catalog__top-element__title{
+    font-size: 20px;
+    font-weight: 500;
+    color: #122952;
+    margin-bottom: 5px;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+}
+.catalog__top-element__allText{
+    display: flex;
+    gap: 5px;
+    font-size: 16px;
+}
+.catalog__top-element__text,
+.catalog__top-element__count{
+    font-size: 16px;
+    font-weight: 400;
+    color: #797D91;
+    line-height: 1.55;
+}
+.buttons__type{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.btn_type{
+    background-color: #FFFFFF;
+    color: #213F74;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.55;
+    cursor: pointer;
+}
+.active{
+   background-color: #213F74;
+   color: #FFFFFF;
+}
+
+
+.catalog{
+    display: flex;
+}
+#products-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* растягиваем контент по высоте */
+    width: 306px;
+    height: auto; /* фиксированная высота */
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.labels {
+    position: absolute;
+    display: flex;
+    gap: 5px;
+    z-index: 2;
+}
+.label {
+    padding: 4px 10px;
+    border-radius: 40px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+}
+.label-new {
+    background: #4cd964;
+}
+.label-sale {
+    background: #ff3b30;
+}
+.label-hit {
+    background: #5856d6;
+}
+.product-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 12px;
+    flex-shrink: 0; /* изображение не сжимается */
+}
+.status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.status-text-in {
+    color: #11D25E; /* зелёный */
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.status-text-out {
+    color: #666666; /* тёмно-серый */
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.status-icon {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: inline-block;
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* В наличии - зелёный круг с белой галочкой */
+.status-in {
+    background-color: #11D25E;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="white" d="M6.173 11.414L3.172 8.413l-1.414 1.414L6.173 14 14 6.173l-1.414-1.414z"/></svg>');
+}
+
+/* Нет в наличии - светло-серый круг с тёмным крестиком */
+.status-out {
+    background-color: #e0e0e0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><line x1="4" y1="4" x2="12" y2="12" stroke="%23666" stroke-width="2"/><line x1="12" y1="4" x2="4" y2="12" stroke="%23666" stroke-width="2"/></svg>');
+}
+.status-article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+
+
+.article {
+    font-size: 14px;
+    color: #888;
+    text-align: right;
+}
+.title {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: #122952;
+    line-height: 1.35;
+    margin-bottom: 8px;
+    flex-shrink: 0; /* предотвращаем сжатие текста */
+}
+.collection {
+    font-size: 14px;
+    color: #4D526C;
+    margin-bottom: 12px;
+}
+.price-block {
+    margin-bottom: 12px;
+    flex-shrink: 0;
+}
+.price-new {
+    font-size: 16px;
+    font-weight: 700;
+    color: #FF0000;
+    letter-spacing: -0.02em;
+}
+.price-old {
+    font-size: 12px;
+    color: #A3A5B2;
+    text-decoration: line-through;
+    text-decoration-color: red;
+    margin-left: 8px;
+}
+.btn-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: auto; /* кнопки прижимаются к низу */
+}
+.btn {
+    width: 100%;
+    height: 50px;
+    padding: 15px ;
+    font-size: 16px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+.btn-primary {
+    background: #1d2d5f;
+    color: #fff;
+}
+.btn-light {
+    background: #f1f3f5;
+    color: #1d2d5f;
+}
+.filters {
+    width: 280px;
+
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+.filter-section {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.filter-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px 0;
+    user-select: none;
+}
+
+.filter-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #122952;
+}
+
+.filter-arrow {
+    font-size: 12px;
+    color: #666;
+    transition: transform 0.3s;
+}
+
+.filter-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.filter-content.expanded {
+    max-height: 500px;
+    margin-top: 10px;
+}
+
+/* Стили для чекбоксов */
+.filter-content label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+    cursor: pointer;
+    font-size: 14px;
+    color: #4D526C;
+}
+
+.filter-content input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    appearance: none;
+    position: relative;
+}
+
+.filter-content input[type="checkbox"]:checked {
+    background: #1d2d5f;
+    border-color: #1d2d5f;
+}
+
+.filter-content input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Стили для слайдера цены */
+.price-slider-container {
+    padding: 10px 5px;
+}
+
+.price-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    justify-content: center;
+
+}
+
+.price-inputs input {
+    width: 80px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+    background-color: transparent;
+    color: #122952;
+    border: none;
+    display: flex;
+}
+
+.price-inputs span {
+    color: #666;
+    font-weight: 500;
+}
+
+.slider-wrapper {
+    position: relative;
+    height: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.slider-track {
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 2px;
+    z-index: 1;
+}
+
+.range-slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    pointer-events: none;
+    -webkit-appearance: none;
+    z-index: 2;
+}
+
+.range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #1d2d5f;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.range-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #1d2d5f;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    cursor: pointer;
+    pointer-events: all;
+}
+
+/* Кнопки фильтров */
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-apply, .btn-reset {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-apply {
+    background: #1d2d5f;
+    color: white;
+}
+
+.btn-apply:hover {
+    background: #152347;
+}
+
+.btn-reset {
+    background: #f1f3f5;
+    color: #1d2d5f;
+    border: 1px solid #ddd;
+}
+
+.btn-reset:hover {
+    background: #e1e5e9;
+}

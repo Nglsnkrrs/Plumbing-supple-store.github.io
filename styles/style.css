@@ -1,0 +1,456 @@
+/* Галлерея */
+.gallery {
+    padding-top: 80px;
+    width: 100%;
+    margin-bottom: 80px;
+}
+.gallery__all{
+   display: grid;
+    grid-template-columns: 2fr 1fr;
+gap: 24px;
+    width: 100%;
+}
+.gallery__items {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* промежутки между рядами */
+    width: 100%;
+}
+.gallery__row {
+    display: grid;
+    gap: 24px;
+    width: 100%;
+     grid-auto-columns: minmax(0, 1fr);
+}
+.gallery__row--top {
+  grid-template-columns:
+    minmax(0, calc(306px))
+    minmax(0, calc(526px));
+}
+
+.gallery__row--bottom {
+  grid-template-columns:
+    minmax(0, calc(526px))
+    minmax(0, calc(306px));
+}
+.gallery__img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery__item {
+    position: relative;
+    width: 100%;
+}
+
+.gallery__text {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0px 40px;
+    z-index: 10;
+    color: #fff;
+}
+.gallery__title{
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+.gallery__text-p {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+.gallery__item:hover .gallery__text-p {
+    background-color: rgba(255, 255, 255, 1);
+}
+.gallery__item--large .gallery__img{
+    max-width: 416px;
+}
+
+/* Акции */
+.sales{
+    margin-bottom: 80px;
+}
+.container__sales{
+    max-width: 1456px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    height: auto;
+    padding: 0 80px 0 80px;
+}
+.sales__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sales__title{
+    font-size: 46px;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    color: #122952;
+    padding-top: 66px;
+    margin-bottom: 40px;
+}
+
+.sales__btn{
+    margin: 64px 0 34px 0;
+}
+.sales__items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 24px;
+}
+.sales__item {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    max-width: 416px;
+    margin-bottom: 70px;
+}
+
+.sales__item .sales_1 {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.sales__item .sales__circle{
+    position: absolute;
+    background: linear-gradient(28deg, rgba(212, 45, 44, 1) 0%, rgba(228, 103, 103, 1) 100%);
+    width: 10vw;
+    height: 10vw;
+    min-width: 80px;
+    min-height: 80px;
+    max-width: 140px;
+    max-height: 140px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    left: 10%;
+    top: 44%;
+    transform: translateY(-50%);
+    /* Фиксированное значение для clip-path */
+clip-path: inset(0 0 20px 0);
+}
+
+
+.sales__circle {
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sales__percent{
+    font-size: 42px;
+}
+.sales__text{
+    font-size: 22px;
+    max-width: 91px;
+}
+.sales__item .sales_2,
+.sales__item .sales_3{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+.sales_text-2{
+    position: absolute;
+    z-index: 2;
+    color: #FFFFFF;
+    top: 30px;
+    left: 40px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+    max-width: 214px;
+}
+.sales__item .sales__cube {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    width: 60%;
+    height: auto;
+}
+.sales__cube-bg{
+    position: absolute;
+    right: 0;
+    top: 0;
+    filter: blur(10px);
+    width: 60%; /* Пропорционально ширине контейнера */
+    height: auto;
+}
+.sales__text{
+    max-width: 416px;
+}
+.sales__text-description{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: #7F8295;
+    width: 100%;
+    padding: 15px 0 10px;
+}
+.sales__text-title{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.35;
+    color: #122952;
+    width: 100%;
+
+}
+.sales__text-text{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: #4D526C;
+    max-width: 416px;
+    width: 100%;
+    padding: 15px 0 15px;
+}
+.sales__text-btn{
+    display: flex;
+    gap: 8px;
+
+}
+.sales__text-btn span {
+    text-decoration: underline;
+    text-decoration-color: #213F74;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #213F74;
+
+}
+.sales__text-btn img{
+    align-items: center;
+}
+
+.about{
+    margin-bottom: 80px;
+}
+
+.about__container{
+    display: grid;
+    grid-template-columns: 726px 1fr; /* Фиксированная ширина для изображений + оставшееся для текста */
+    align-items: start;
+    gap: 44px;
+}
+
+.about .images {
+    display: grid;
+    grid-template-columns: 616px;
+    grid-template-rows: 491px;
+    position: relative;
+}
+.big {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    padding-left: 110px;
+}
+
+.big img {
+    width: 616px;
+    height: 491px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+/* ——— МАЛЕНЬКОЕ ИЗОБРАЖЕНИЕ ——— */
+.small {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 60px;
+}
+.small-inner {
+    padding: 24px 24px 24px 0; /* сверху | справа | снизу | слева */
+    background: #F3F5F7;          /* цвет "обводки" */
+    border-radius: 20px 20px 20px 20px; /* закругления */
+    display: inline-block;
+}
+
+.small-inner img {
+    width: 330px;
+    height: 307px;
+    border-radius: 10px 10px 10px 10px; /* внутреннее скругление */
+    display: block;
+}
+
+.about__text-all{
+    max-width: 526px;
+    width: 100%;
+}
+
+.about__title{
+    font-size: 46px;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    color: #122952;
+
+}
+.about__title-text{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.55;
+    padding-top: 40px;
+    margin-bottom: 20px;
+    color: #4D526C;
+}
+.about__title-description{
+    font-size: 20px;
+    font-weight: 500;letter-spacing: -0.02em;
+    line-height: 1.45;
+    color: #122952;
+}
+.about__text{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.55;
+    padding-top: 20px;
+    margin-bottom: 40px;
+    color: #4D526C;
+}
+
+@media (max-width: 1330px){
+
+}
+@media (max-width: 768px) {
+    .gallery {
+        padding-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .gallery__all {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+
+    .gallery__items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        order: 1;
+    }
+
+    .gallery__row {
+        display: contents; /* Убираем строки, работаем напрямую с элементами */
+    }
+
+    .gallery__item {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 8px;
+        position: relative;
+    }
+
+    .gallery__item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Первый ряд: Смесители и Душевые системы */
+    .gallery__row--top .gallery__item:nth-child(1) {
+        /* Смесители - 229px */
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .gallery__row--top .gallery__item:nth-child(2) {
+        /* Душевые системы - 479px */
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    /* Второй ряд: Изливы и Душевые стойки */
+    .gallery__row--bottom .gallery__item:nth-child(1) {
+        /* Изливы - 479px */
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .gallery__row--bottom .gallery__item:nth-child(2) {
+        /* Душевые стойки - 229px */
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    /* Третий элемент: Аксессуары - полная ширина */
+    .gallery__item--large {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+        width: 100%;
+        height: 200px;
+        order: 2;
+        margin-top: 16px;
+    }
+
+    /* Переопределяем размеры для правильного соотношения */
+    .gallery__item {
+        height: 200px;
+    }
+
+    /* Делаем некоторые элементы шире/уже для нужных пропорций */
+    .gallery__row--top .gallery__item:nth-child(1),
+    .gallery__row--bottom .gallery__item:nth-child(2) {
+        /* Узкие элементы - примерно 1/3 ширины */
+        grid-column-end: span 1;
+    }
+
+    .gallery__row--top .gallery__item:nth-child(2),
+    .gallery__row--bottom .gallery__item:nth-child(1) {
+        /* Широкие элементы - примерно 2/3 ширины */
+        grid-column-end: span 1;
+    }
+
+    /* Текст на карточках */
+    .gallery__text {
+        padding: 0 20px;
+        bottom: 20px;
+    }
+
+    .gallery__title {
+        font-size: 16px;
+    }
+
+    .gallery__text-p {
+        width: 30px;
+        height: 30px;
+    }
+
+    .gallery__text-p img {
+        width: 12px;
+        height: 12px;
+    }
+}
