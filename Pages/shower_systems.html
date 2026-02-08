@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEMM | Каталог</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/common_styles.css">
+    <link rel="stylesheet" href="/styles/style_catalog.css">
+    <link rel="stylesheet" href="/styles/style_type.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/product-data.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="/scripts/products.js" defer></script>
+    <script src="/scripts/filter.js" defer></script>
+    <script src="/scripts/cart.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <nav class="menu__top">
+                    <ul class="menu__top-list">
+                        <a href="#" class="menu__top-item">О компании</a>
+                        <a href="#" class="menu__top-item">Оплата и доставка</a>
+                        <a href="#" class="menu__top-item">Магазины</a>
+                        <a href="#" class="menu__top-item">Контакты</a>
+                    </ul>
+                    <a href="#" class="menu__pc">
+                        <img src="/icons/user.svg" alt="">
+                        Личный кабинет
+                    </a>
+                </nav>
+            </div>
+        </div>
+        <div class="header__middle__all">
+            <div class="container">
+                <div class="header__middle">
+                    <img src="/icons/logo.svg" alt="" class="header__logo">
+                    <div class="search">
+                        <input class="search__form-txt" type="text" placeholder="Поиск по сайту...">
+                        <button class="search__form-btn">
+                            <img class="search__form-img" src="/icons/search.svg" alt="">
+                        </button>
+                        <!-- Переместили внутрь .search -->
+                        <div class="search-results"></div>
+                    </div>
+                    <div class="header__middle-right">
+                        <div class="text__right">
+                            <a href="tel:79999999999" class="phone">+7 999 999-99-99</a>
+                            <div class="text">
+                                <img src="/icons/Ellipse.svg" alt="">
+                                <p class="text__title">
+                                    Звоните с 8:10 до 18:10
+                                </p>
+                            </div>
+                        </div>
+                        <a href="#" data-modal-open class="button__right">Заказать звонок</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__buttom">
+            <div class="container">
+                <div class="menu__bottom">
+                    <ul class="menu__bottom-list">
+                        <a href="#" class="menu__bottom-item__sales">
+                            <img src="/icons/sales.svg" alt="">
+                            Акции
+                        </a>
+                        <a href="./mixers.html" class="menu__bottom-item">Смесители</a>
+                        <a href="./shower_systems.html" class="menu__bottom-item">Душевые системы</a>
+                        <a href="./shower_racks.html" class="menu__bottom-item">Душевые стойки</a>
+                        <a href="./spouts.html" class="menu__bottom-item">Изливы</a>
+                        <a href="./accessories.html" class="menu__bottom-item">Аксессуары</a>
+                    </ul>
+                    <div class="cart">
+                        <div class="cart-icon">
+                            <span class="circle">0</span>
+                            <img class="shopping" src="/icons/shopping-cart.svg" alt="">
+                        </div>
+                        <p>Корзина</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <header class="header__mobile">
+        <div class="header__middle__all">
+            <div class="container">
+                <div class="header__middle">
+                    <img src="/icons/logo.svg" alt="" class="header__logo">
+                    <div class="search">
+                        <input class="search__form-txt" type="text" placeholder="Поиск по сайту...">
+                        <button class="search__form-btn">
+                            <img class="search__form-img" src="/icons/search.svg" alt="">
+                        </button>
+                        <!-- Переместили внутрь .search -->
+                        <div class="search-results"></div>
+                    </div>
+                    <div class="header__middle-right">
+                        <a href="" class="user">
+                            <img src="/icons/user_mobile.svg" alt="">
+                        </a>
+                        <div class="cart">
+                            <div class="cart-icon">
+                                <span class="circle">0</span>
+                                <img class="shopping" src="/icons/shopping-cart_mobile.svg" alt="">
+                            </div>
+                            <div id="cartPopupMobile" class="cart-popup"></div>
+                        </div>
+                        <button class="hamburger" id="hamburger">&#9776;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__content">
+            <div class="mobile__top">
+                <img class="mobile-menu__img" src="/icons/logo.svg" alt="">
+                <button class="mobile-menu__close" id="mobileMenuClose">&times;</button>
+            </div>
+            <nav class="mobile-menu__catalog">
+                <div class="catalog-header">
+                    Каталог
+                </div>
+                <div class="catalog-links">
+                    <a href="#">Смесители</a>
+                    <a href="#">Душевые системы</a>
+                    <a href="#">Душевые стойки</a>
+                    <a href="#">Изливы</a>
+                    <a href="#">Аксессуары</a>
+                </div>
+            </nav>
+
+            <nav class="mobile-menu__nav">
+                <a href="#">Акции</a>
+                <a href="#">О компании</a>
+                <a href="#">Оплата и доставка</a>
+                <a href="#">Магазины</a>
+                <a href="#">Контакты</a>
+            </nav>
+            <div class="cart">
+                <div class="cart-icon">
+                    <span class="circle">0</span>
+                    <img class="shopping" src="/icons/shopping-cart_mobile.svg" alt="">
+                </div>
+                <p>Корзина</p>
+                <div id="cartPopupMobile" class="cart-popup"></div>
+            </div>
+            <a href="#" class="user__icon">
+                <div class="user">
+                    <img src="/icons/user_mobile.svg" alt="">
+                </div>
+                <p>Личный кабинет</p>
+            </a>
+
+
+
+            <div class="mobile-menu__user">
+                <a href="tel:79999999999" class="mobile-menu__phone">+7 999 999-99-99</a>
+                <div class="text-mobile">
+                    <img src="/icons/Ellipse.svg" alt="">
+                    <p class="text__title-mobile">
+                        Звоните с 8:10 до 18:10
+                    </p>
+                </div>
+            </div>
+                <a href="#" data-modal-open class="button__right-mobile">Заказать звонок</a>
+                <a href="#" class="whatsapp">
+                    <img class="logo__footer" src="/icons/whatsapp.svg" alt="">
+                    <span>Написать в WhatsApp</span>
+                </a>
+        </div>
+
+
+
+    </div>
+    <div class="container">
+        <div class="modal">
+            <div class="modal__box">
+                <button class="close" data-modal-close><img src="/icons/close.svg" alt=""></button>
+                <h1 class="modal__box-title">Оставьте заявку на обратный звонок</h1>
+                <p class="modal__box-text">Заполните форму, наш специалист свяжется с вами в ближайшее время.</p>
+                <div class="modal__box-inputs">
+                    <input type="text" class="modal__input-name" placeholder="Ваше имя">
+                    <input type="tel" class="modal__input-phone" placeholder="Номер телефона">
+                </div>
+                <div class="modal__box-checkbox">
+                    <input type="checkbox">
+                    <span>Я согласен(а) с Политикой конфиденциальности.</span>
+                </div>
+                <a href="#" class="modal__butn">Оставить заявку</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="catalog__top">
+        <div class="container">
+            <nav data-nav-items class="catalog__top-items"></nav>
+            <h1 data-nav-title class="catalog__top-title">Душевые системы</h1>
+            <div class="catalog">
+                <aside class="filters">
+                    <!-- Фильтр по коллекции -->
+                    <div class="filter-section">
+                        <div class="filter-header" onclick="toggleFilter('collection')">
+                            <h3>Коллекция</h3>
+                            <span class="filter-arrow">▼</span>
+                        </div>
+                        <div class="filter-content" id="collectionFilter">
+                            <!-- Динамически заполнится -->
+                        </div>
+                    </div>
+
+                    <!-- Фильтр по стилю -->
+                    <div class="filter-section">
+                        <div class="filter-header" onclick="toggleFilter('style')">
+                            <h3>Стиль</h3>
+                            <span class="filter-arrow">▼</span>
+                        </div>
+                        <div class="filter-content" id="styleFilter">
+                            <!-- Динамически заполнится -->
+                        </div>
+                    </div>
+
+                    <!-- Фильтр по цвету -->
+                    <div class="filter-section">
+                        <div class="filter-header" onclick="toggleFilter('color')">
+                            <h3>Цвет</h3>
+                            <span class="filter-arrow">▼</span>
+                        </div>
+                        <div class="filter-content" id="colorFilter">
+                            <!-- Динамически заполнится -->
+                        </div>
+                    </div>
+
+                    <!-- Фильтр по цене -->
+                    <div class="filter-section">
+                        <div class="filter-header" onclick="toggleFilter('price')">
+                            <h3>Цена, руб.</h3>
+                            <span class="filter-arrow">▼</span>
+                        </div>
+                        <div class="filter-content" id="priceFilter">
+                            <div class="price-slider-container">
+                                <div class="price-inputs">
+                                    <input type="number" id="priceMin" placeholder="0" min="0">
+                                    <span>-</span>
+                                    <input type="number" id="priceMax" placeholder="100000" min="0">
+                                </div>
+                                <div class="slider-wrapper">
+                                    <div class="slider-track"></div>
+                                    <input type="range" class="range-slider" min="0" max="100000" value="0" id="rangeMin">
+                                    <input type="range" class="range-slider" min="0" max="100000" value="100000" id="rangeMax">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-buttons">
+                        <button class="btn-reset" id="resetFilters">Сбросить</button>
+                    </div>
+                </aside>
+
+
+
+
+                <main class="products">
+                    <div class="buttons__type">
+                        <button class="btn_type new">Новинки</button>
+                        <button class="btn_type sale">Акционные товары</button>
+                        <button class="btn_type hit">Хиты продаж</button>
+                    </div>
+
+                    <div id="products-container">
+                        <!-- Продукты будут добавлены здесь с помощью JavaScript -->
+                    </div>
+                </main>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Форма -->
+    <section class="form">
+        <div class="container">
+            <img src="/icons/logo_form.svg" alt="">
+            <h1 class="form__title">Остались вопросы?</h1>
+            <p class="form__desc">Заполните форму, мы свяжемся с вами в ближайшее время, ответим на все вопросы и предоставим консультацию по ассортименту.</p>
+            <div class="inputs">
+                <input type="text" class="form__input-name" placeholder="Ваше имя">
+                <input type="tel" class="form__input-phone" placeholder="Номер телефона">
+            </div>
+            <label class="checkbox">
+                <input type="checkbox">
+                <span>Я согласен(а) с Политикой конфиденциальности.</span>
+            </label>
+            <a href="#" class="form__btn">Оставить заявку</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__items">
+
+                <div class="info">
+                    <img src="/icons/logo.svg" alt="">
+                    <a href="#" class="whatsapp">
+                        <img class="logo__footer" src="/icons/whatsapp.svg" alt="">
+                        <span>Написать в WhatsApp</span>
+                    </a>
+                </div>
+
+                <div class="item__catalog">
+                    <p class="catalog__title">КАТАЛОГ</p>
+                    <nav class="items__catalog">
+                        <a href="#" class="catalog__item">Смесители</a>
+                        <a href="#" class="catalog__item">Душевые системы</a>
+                        <a href="#" class="catalog__item">Душевые стойки</a>
+                        <a href="#" class="catalog__item">Изливы</a>
+                        <a href="#" class="catalog__item">Аксессуары</a>
+                    </nav>
+                </div>
+
+                <div class="item__client">
+                    <p class="client__title">ДЛЯ КЛИЕНТА</p>
+                    <nav class="items__client">
+                        <a href="#" class="client__item">Акции</a>
+                        <a href="#" class="client__item">О компании</a>
+                        <a href="#" class="client__item">Оплата и доставка</a>
+                        <a href="#" class="client__item">Магазины</a>
+                        <a href="#" class="client__item">Контакты</a>
+                    </nav>
+                </div>
+
+                <div class="connection">
+                    <h2 class="connection__title">Узнавайте об акциях и новостях первыми, подпишитесь на рассылку</h2>
+                    <div class="connection__input">
+                        <input type="email" placeholder="Электронная почта">
+                        <a href="#" class="connection__btn">
+                            Подписаться
+                            <img src="/icons/arrow_sales.svg" alt="">
+                        </a>
+
+                    </div>
+                    <a href="tel:79999999999" class="connection__phone">+7 999 999-99-99</a>
+                    <p class="connection__address">
+                        <img src="/icons/pointer.svg" alt="">
+                        г. Новосибирск, улица, дом, офис
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="container__items-footer">
+                    <p class="copy">© DEMM RUBINETTERIA 2023</p>
+                    <p>Договор оферты</p>
+                    <p>Пользовательское соглашение</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
