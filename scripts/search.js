@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
             resultsContainer.style.display = "none";
 
             // Переходим на страницу товара с артикулом в URL
-            window.location.href = `/Pages/product.html?article=${product.article}`;
+            window.location.href = `/Plumbing-supple-store.github.io/Pages/product.html?article=${product.article}`;
         });
 
         resultsContainer.appendChild(productEl);
@@ -69,3 +69,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
