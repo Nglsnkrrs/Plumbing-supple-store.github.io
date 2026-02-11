@@ -112,7 +112,7 @@ function renderDescriptionAndKit(product) {
 
     if (kit && product.kit && product.kit.length) {
         kit.innerHTML = `<h2 class="section-title">Комплектация</h2><ul class="kit-list">${product.kit.map(i => `
-        <li class="kit-item"><span class="kit-icon"><img src="/icons/Vector.svg"></span>${i}</li>`).join('')}</ul>`;
+        <li class="kit-item"><span class="kit-icon"><img src="/Plumbing-supple-store.github.io/icons/Vector.svg"></span>${i}</li>`).join('')}</ul>`;
     }
 }
 
@@ -130,11 +130,11 @@ function updateBreadcrumbs(product) {
     const categoryName = categoryMap[product.typeProduct] || 'Каталог';
     const categoryUrl = getCategoryUrl(product.typeProduct);
 
-    nav.innerHTML = `<a href="/index.html" class="navigation__item nav-unactive">Главная</a><span>/</span><a href="/Pages/catalog.html" class="navigation__item nav-unactive">Каталог</a><span>/</span><a href="${categoryUrl}" class="navigation__item nav-unactive">${categoryName}</a><span>/</span><a href="#" class="navigation__item navigation__item--current nav-active">${product.title}</a>`;
+    nav.innerHTML = `<a href="/Plumbing-supple-store.github.io/index.html" class="navigation__item nav-unactive">Главная</a><span>/</span><a href="/Plumbing-supple-store.github.io/Pages/catalog.html" class="navigation__item nav-unactive">Каталог</a><span>/</span><a href="${categoryUrl}" class="navigation__item nav-unactive">${categoryName}</a><span>/</span><a href="#" class="navigation__item navigation__item--current nav-active">${product.title}</a>`;
 }
 
 function getCategoryUrl(type) {
-    return { 'mixers':'/Pages/mixers.html','shower systems':'/Pages/shower_systems.html','shower racks':'/Pages/shower_racks.html','spouts':'/Pages/spouts.html','accessories':'/Pages/accessories.html' }[type] || '/Pages/catalog.html';
+    return { 'mixers':'/Plumbing-supple-store.github.io/Pages/mixers.html','shower systems':'/Plumbing-supple-store.github.io/Pages/shower_systems.html','shower racks':'/Plumbing-supple-store.github.io/Pages/shower_racks.html','spouts':'/Plumbing-supple-store.github.io/Pages/spouts.html','accessories':'/Plumbing-supple-store.github.io/Pages/accessories.html' }[type] || '/Plumbing-supple-store.github.io/Pages/catalog.html';
 }
 
 // ===== Слайдер коллекции =====
@@ -152,8 +152,8 @@ function initCollectionSlider(collection, currentArticle) {
     products.forEach(p=>{
         const slide = document.createElement('a');
         slide.className = 'swiper-slide';
-        slide.href = `/Pages/product.html?article=${p.article}`;
-        slide.innerHTML = `<div class="slide-image-container"><img src="${p.image}" alt="${p.title}"></div><div class="slide-text"><h3 class="swiper__title">${p.title}</h3><div class="swiper__btn"><p class="swiper__btn-txt">Смотреть</p><img src="/icons/arrow-right-blue.svg"></div></div>`;
+        slide.href = `/Plumbing-supple-store.github.io/Pages/product.html?article=${p.article}`;
+        slide.innerHTML = `<div class="slide-image-container"><img src="${p.image}" alt="${p.title}"></div><div class="slide-text"><h3 class="swiper__title">${p.title}</h3><div class="swiper__btn"><p class="swiper__btn-txt">Смотреть</p><img src="/Plumbing-supple-store.github.io/icons/arrow-right-blue.svg"></div></div>`;
         wrapper.appendChild(slide);
     });
 
@@ -223,7 +223,7 @@ function initRecommendedSlider(currentArticle) {
         slide.className = 'swiper-slide';
         slide.innerHTML = `
             <div class="slide-content" style="display:flex; flex-direction:column; height:100%;">
-                <a href="/Pages/product.html?article=${p.article}" class="slide-link">
+                <a href="/Plumbing-supple-store.github.io/Pages/product.html?article=${p.article}" class="slide-link">
                     <div class="slide-image-container">
                         <img src="${p.image}" alt="${p.title}">
                         <div class="labels">
@@ -325,3 +325,4 @@ function showError(msg){
     const container=document.querySelector('.product-page-container');
     if(container) container.innerHTML=`<div class="error">${msg}</div>`;
 }
+
