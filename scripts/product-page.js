@@ -130,11 +130,11 @@ function updateBreadcrumbs(product) {
     const categoryName = categoryMap[product.typeProduct] || 'Каталог';
     const categoryUrl = getCategoryUrl(product.typeProduct);
 
-    nav.innerHTML = `<a href="/Plumbing-supple-store.github.io/index.html" class="navigation__item nav-unactive">Главная</a><span>/</span><a href="/Plumbing-supple-store.github.io/Pages/catalog.html" class="navigation__item nav-unactive">Каталог</a><span>/</span><a href="${categoryUrl}" class="navigation__item nav-unactive">${categoryName}</a><span>/</span><a href="#" class="navigation__item navigation__item--current nav-active">${product.title}</a>`;
+    nav.innerHTML = `<a href="../index.html" class="navigation__item nav-unactive">Главная</a><span>/</span><a href="catalog.html" class="navigation__item nav-unactive">Каталог</a><span>/</span><a href="${categoryUrl}" class="navigation__item nav-unactive">${categoryName}</a><span>/</span><a href="#" class="navigation__item navigation__item--current nav-active">${product.title}</a>`;
 }
 
 function getCategoryUrl(type) {
-    return { 'mixers':'/Plumbing-supple-store.github.io/Pages/mixers.html','shower systems':'/Plumbing-supple-store.github.io/Pages/shower_systems.html','shower racks':'/Plumbing-supple-store.github.io/Pages/shower_racks.html','spouts':'/Plumbing-supple-store.github.io/Pages/spouts.html','accessories':'/Plumbing-supple-store.github.io/Pages/accessories.html' }[type] || '/Plumbing-supple-store.github.io/Pages/catalog.html';
+    return { 'mixers':'mixers.html','shower systems':'shower_systems.html','shower racks':'shower_racks.html','spouts':'spouts.html','accessories':'accessories.html' }[type] || 'catalog.html';
 }
 
 // ===== Слайдер коллекции =====
@@ -325,4 +325,5 @@ function showError(msg){
     const container=document.querySelector('.product-page-container');
     if(container) container.innerHTML=`<div class="error">${msg}</div>`;
 }
+
 
