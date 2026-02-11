@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEMM | Каталог</title>
+    <title>DEMM | Душевые стойки</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <!-- ИСПРАВЛЕНО: пути от корня сайта (уже правильно) -->
     <link rel="stylesheet" href="/styles/common_styles.css">
     <link rel="stylesheet" href="/styles/style_catalog.css">
     <link rel="stylesheet" href="/styles/style_type.css">
+    
     <script src="/scripts/main.js" defer></script>
     <script src="/scripts/product-data.js" defer></script>
     <script src="/scripts/search.js" defer></script>
@@ -45,7 +48,6 @@
                         <button class="search__form-btn">
                             <img class="search__form-img" src="/icons/search.svg" alt="">
                         </button>
-                        <!-- Переместили внутрь .search -->
                         <div class="search-results"></div>
                     </div>
                     <div class="header__middle-right">
@@ -71,11 +73,12 @@
                             <img src="/icons/sales.svg" alt="">
                             Акции
                         </a>
-                        <a href="./mixers.html" class="menu__bottom-item">Смесители</a>
-                        <a href="./shower_systems.html" class="menu__bottom-item">Душевые системы</a>
-                        <a href="./shower_racks.html" class="menu__bottom-item">Душевые стойки</a>
-                        <a href="./spouts.html" class="menu__bottom-item">Изливы</a>
-                        <a href="./accessories.html" class="menu__bottom-item">Аксессуары</a>
+                        <!-- ИСПРАВЛЕНО: заменяем ./ на /Pages/ -->
+                        <a href="/Pages/mixers.html" class="menu__bottom-item">Смесители</a>
+                        <a href="/Pages/shower_systems.html" class="menu__bottom-item">Душевые системы</a>
+                        <a href="/Pages/shower_racks.html" class="menu__bottom-item">Душевые стойки</a>
+                        <a href="/Pages/spouts.html" class="menu__bottom-item">Изливы</a>
+                        <a href="/Pages/accessories.html" class="menu__bottom-item">Аксессуары</a>
                     </ul>
                     <div class="cart">
                         <div class="cart-icon">
@@ -89,7 +92,6 @@
         </div>
     </header>
 
-
     <header class="header__mobile">
         <div class="header__middle__all">
             <div class="container">
@@ -100,7 +102,6 @@
                         <button class="search__form-btn">
                             <img class="search__form-img" src="/icons/search.svg" alt="">
                         </button>
-                        <!-- Переместили внутрь .search -->
                         <div class="search-results"></div>
                     </div>
                     <div class="header__middle-right">
@@ -120,6 +121,7 @@
             </div>
         </div>
     </header>
+    
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu__content">
             <div class="mobile__top">
@@ -131,11 +133,12 @@
                     Каталог
                 </div>
                 <div class="catalog-links">
-                    <a href="#">Смесители</a>
-                    <a href="#">Душевые системы</a>
-                    <a href="#">Душевые стойки</a>
-                    <a href="#">Изливы</a>
-                    <a href="#">Аксессуары</a>
+                    <!-- ИСПРАВЛЕНО: добавляем ссылки на страницы -->
+                    <a href="/Pages/mixers.html">Смесители</a>
+                    <a href="/Pages/shower_systems.html">Душевые системы</a>
+                    <a href="/Pages/shower_racks.html">Душевые стойки</a>
+                    <a href="/Pages/spouts.html">Изливы</a>
+                    <a href="/Pages/accessories.html">Аксессуары</a>
                 </div>
             </nav>
 
@@ -161,8 +164,6 @@
                 <p>Личный кабинет</p>
             </a>
 
-
-
             <div class="mobile-menu__user">
                 <a href="tel:79999999999" class="mobile-menu__phone">+7 999 999-99-99</a>
                 <div class="text-mobile">
@@ -172,16 +173,14 @@
                     </p>
                 </div>
             </div>
-                <a href="#" data-modal-open class="button__right-mobile">Заказать звонок</a>
-                <a href="#" class="whatsapp">
-                    <img class="logo__footer" src="/icons/whatsapp.svg" alt="">
-                    <span>Написать в WhatsApp</span>
-                </a>
+            <a href="#" data-modal-open class="button__right-mobile">Заказать звонок</a>
+            <a href="#" class="whatsapp">
+                <img class="logo__footer" src="/icons/whatsapp.svg" alt="">
+                <span>Написать в WhatsApp</span>
+            </a>
         </div>
-
-
-
     </div>
+    
     <div class="container">
         <div class="modal">
             <div class="modal__box">
@@ -201,50 +200,36 @@
         </div>
     </div>
 
-
-
-
-
     <section class="catalog__top">
         <div class="container">
             <nav data-nav-items class="catalog__top-items"></nav>
             <h1 data-nav-title class="catalog__top-title">Душевые стойки</h1>
             <div class="catalog">
                 <aside class="filters">
-                    <!-- Фильтр по коллекции -->
                     <div class="filter-section">
                         <div class="filter-header" onclick="toggleFilter('collection')">
                             <h3>Коллекция</h3>
                             <span class="filter-arrow">▼</span>
                         </div>
-                        <div class="filter-content" id="collectionFilter">
-                            <!-- Динамически заполнится -->
-                        </div>
+                        <div class="filter-content" id="collectionFilter"></div>
                     </div>
 
-                    <!-- Фильтр по стилю -->
                     <div class="filter-section">
                         <div class="filter-header" onclick="toggleFilter('style')">
                             <h3>Стиль</h3>
                             <span class="filter-arrow">▼</span>
                         </div>
-                        <div class="filter-content" id="styleFilter">
-                            <!-- Динамически заполнится -->
-                        </div>
+                        <div class="filter-content" id="styleFilter"></div>
                     </div>
 
-                    <!-- Фильтр по цвету -->
                     <div class="filter-section">
                         <div class="filter-header" onclick="toggleFilter('color')">
                             <h3>Цвет</h3>
                             <span class="filter-arrow">▼</span>
                         </div>
-                        <div class="filter-content" id="colorFilter">
-                            <!-- Динамически заполнится -->
-                        </div>
+                        <div class="filter-content" id="colorFilter"></div>
                     </div>
 
-                    <!-- Фильтр по цене -->
                     <div class="filter-section">
                         <div class="filter-header" onclick="toggleFilter('price')">
                             <h3>Цена, руб.</h3>
@@ -271,9 +256,6 @@
                     </div>
                 </aside>
 
-
-
-
                 <main class="products">
                     <div class="buttons__type">
                         <button class="btn_type new">Новинки</button>
@@ -281,22 +263,12 @@
                         <button class="btn_type hit">Хиты продаж</button>
                     </div>
 
-                    <div id="products-container">
-                        <!-- Продукты будут добавлены здесь с помощью JavaScript -->
-                    </div>
+                    <div id="products-container"></div>
                 </main>
-
             </div>
-
         </div>
     </section>
 
-
-
-
-
-
-    <!-- Форма -->
     <section class="form">
         <div class="container">
             <img src="/icons/logo_form.svg" alt="">
@@ -317,7 +289,6 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__items">
-
                 <div class="info">
                     <img src="/icons/logo.svg" alt="">
                     <a href="#" class="whatsapp">
@@ -329,11 +300,12 @@
                 <div class="item__catalog">
                     <p class="catalog__title">КАТАЛОГ</p>
                     <nav class="items__catalog">
-                        <a href="#" class="catalog__item">Смесители</a>
-                        <a href="#" class="catalog__item">Душевые системы</a>
-                        <a href="#" class="catalog__item">Душевые стойки</a>
-                        <a href="#" class="catalog__item">Изливы</a>
-                        <a href="#" class="catalog__item">Аксессуары</a>
+                        <!-- ИСПРАВЛЕНО: заменяем # на /Pages/... -->
+                        <a href="/Pages/mixers.html" class="catalog__item">Смесители</a>
+                        <a href="/Pages/shower_systems.html" class="catalog__item">Душевые системы</a>
+                        <a href="/Pages/shower_racks.html" class="catalog__item">Душевые стойки</a>
+                        <a href="/Pages/spouts.html" class="catalog__item">Изливы</a>
+                        <a href="/Pages/accessories.html" class="catalog__item">Аксессуары</a>
                     </nav>
                 </div>
 
@@ -356,7 +328,6 @@
                             Подписаться
                             <img src="/icons/arrow_sales.svg" alt="">
                         </a>
-
                     </div>
                     <a href="tel:79999999999" class="connection__phone">+7 999 999-99-99</a>
                     <p class="connection__address">
@@ -377,15 +348,5 @@
             </div>
         </div>
     </footer>
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>
