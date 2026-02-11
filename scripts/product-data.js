@@ -2,7 +2,7 @@
 const productData = [
     {
         labels: ["new", "hit", "sale"],
-        image: "/products/Demm SPIKE.jpg",
+        image: "/Plumbing-supple-store.github.io/products/Demm SPIKE.jpg",
         status: "Нет в наличии",
         article: "6810",
         title: "Demm SPIKE Смеситель для раковины на 1отв.,излив: 11,6см с донным клапаном, цвет: ХРОМ",
@@ -24,7 +24,7 @@ const productData = [
     },
     {
         labels: ["new", "hit"],
-        image: "/products/Demm SLEEK.jpg",
+        image: "/Plumbing-supple-store.github.io/products/Demm SLEEK.jpg",
         status: "В наличии",
         article: "9918HU",
         title: "Demm SLEEK Смеситель для раковины встраиваемый, с внутренней частью, излив 15см, цвет: НИКЕЛЬ МАТОВЫ",
@@ -47,7 +47,7 @@ const productData = [
     },
     {
         labels: ["hit"],
-        image: "/products/Demm SPIKE_2.jpg",
+        image: "/Plumbing-supple-store.github.io/products/Demm SPIKE_2.jpg",
         status: "В наличии",
         article: "ACIARIUM INOX",
         title: "Demm SPIKE Смеситель для биде на 1отв. с донным клапаном, цвет: ЧЕРНЫЙ",
@@ -69,7 +69,7 @@ const productData = [
     },
     {
         labels: ["new", "hit"],
-        image: "/products/Demm SLEEK_2.jpg",
+        image: "/Plumbing-supple-store.github.io/products/Demm SLEEK_2.jpg",
         status: "В наличии",
         article: "9914ZRM",
         title: "Demm SLEEK Смеситель для раковины Высокий на 1отв.,излив: 17см с донным клапаном, цвет: РОДИЙ МАТОВЫ",
@@ -92,7 +92,7 @@ const productData = [
     },
     {
         labels: ["sale"],
-        image: "/products/Demm INCASSO.jpg",
+        image: "/Plumbing-supple-store.github.io/products/Demm INCASSO.jpg",
         status: "Нет в наличии",
         article: "16050NU",
         title: "Demm INCASSO Встроенная душевая система Термостатический,на 2 выхода с перекл.,цвет: ЧЕРНЫЙ",
@@ -115,7 +115,7 @@ const productData = [
     },
     {
         labels: [],
-        image: "/products/Demm INCASSO_2.jpg",
+        image: "/Plumbing-supple-store.github.io/products/Demm INCASSO_2.jpg",
         status: "В наличии",
         article: "16040NU",
         title: "Demm INCASSO Встроенная душевая система с встроенной частью, на 2 выхода с перекл,квадр,цвет: ЧЕРНЫЙ",
@@ -138,7 +138,7 @@ const productData = [
     },
     {
         labels: ["new", "hit", "sale"],
-        image: "/products/Demm SLEEK_3.jpg",
+        image: "/Plumbing-supple-store.github.io/products/Demm SLEEK_3.jpg",
         status: "В наличии",
         article: "16099",
         title: "Demm SLEEK Смеситель для раковины на 1 отв, цвет: хром",
@@ -161,7 +161,7 @@ const productData = [
     },
     {
         labels: [],
-        image: "/products/Demm INCASSO_3.jpg",
+        image: "/Plumbing-supple-store.github.io/products/Demm INCASSO_3.jpg",
         status: "В наличии",
         article: "16040",
         title: "Demm INCASSO Встроенная душевая система с встроенной частью, на 2 выхода с перекл., квадр,цвет: ХРОМ",
@@ -184,7 +184,7 @@ const productData = [
     },
     {
         labels: [],
-        image: "/products/Demm DOCCIA_1.jpg",
+        image: "/Plumbing-supple-store.github.io/products/Demm DOCCIA_1.jpg",
         status: "Нет в наличии",
         article: "4718CD",
         title: "Demm DOCCIA Душевая стойка термостатическая, с автоматическим переключателем, круглая, 1 т.к., Хром",
@@ -207,7 +207,7 @@ const productData = [
     },
     {
         labels: ["sale"],
-        image: "/products/Demm DOCCIA_2.jpg",
+        image: "/Plumbing-supple-store.github.io/products/Demm DOCCIA_2.jpg",
         status: "Нет в наличии",
         article: "15406NU",
         title: "Demm DOCCIA Душевая стойка термостатическая, с автоматическим переключателем, круглая цвет: ЧЕРНЫЙ",
@@ -230,7 +230,7 @@ const productData = [
     },
     {
         labels: [],
-        image: "/products/Demm DOCCIA_3.jpg",
+        image: "/Plumbing-supple-store.github.io/products/Demm DOCCIA_3.jpg",
         status: "В наличии",
         article: "15845",
         title: "Demm DOCCIA Душевая стойка термостатическая, с автоматическим переключателем, квадрат, цвет: ХРОМ",
@@ -253,7 +253,7 @@ const productData = [
     },
     {
         labels: [],
-        image: "/products/Demm DOCCIA_4.jpg",
+        image: "/Plumbing-supple-store.github.io/products/Demm DOCCIA_4.jpg",
         status: "В наличии",
         article: "15845NU",
         title: "Demm DOCCIA Душевая стойка термостатическая, с автоматическим переключателем, квадрат, цвет: ЧЕРНЫЙ",
@@ -276,7 +276,7 @@ const productData = [
     },
     {
         labels: [],
-        image: "/products/INCASSO_1.jpg",
+        image: "/Plumbing-supple-store.github.io/products/INCASSO_1.jpg",
         status: "В наличии",
         article: "9516",
         title: "Demm INCASSO Излив на ванну квадратный, 18,8см, цвет: ХРОМ",
@@ -298,7 +298,7 @@ const productData = [
     },
     {
         labels: ["new", "hit"],
-        image: "/products/DEMM_3.webp",
+        image: "/Plumbing-supple-store.github.io/products/DEMM_3.webp",
         status: "В наличии",
         article: "161",
         title: "Донный клапан для раковины CLICK-CLACK квадратный без перелива Demm, цвет хром",
@@ -318,7 +318,7 @@ const productData = [
     },
     {
         labels: [],
-        image: "/products/DEMM_2.webp",
+        image: "/Plumbing-supple-store.github.io/products/DEMM_2.webp",
         status: "В наличии",
         article: "15421",
         title: "Душевой шланг растягивающийся 150 см “1/2” дюйма Demm",
@@ -338,7 +338,7 @@ const productData = [
     },
     {
         labels: ["hit"],
-        image: "/products/Demm_1.webp",
+        image: "/Plumbing-supple-store.github.io/products/Demm_1.webp",
         status: "В наличии",
         article: "4262ZB",
         title: "Выпуск для шланга с держателем “1/2” — “1/2” Demm, латунь, цвет матовое золото",
@@ -357,3 +357,4 @@ const productData = [
         kit: ["Выпуск для шланга с держателем", "Инструкция"]
     },
 ];
+
