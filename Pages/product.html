@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DEMM | Товар</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <!-- ИСПРАВЛЕНО: все стили от корня -->
     <link rel="stylesheet" href="/styles/common_styles.css">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/style_catalog.css">
     <link rel="stylesheet" href="/styles/product_style.css">
+    
+    <!-- ИСПРАВЛЕНО: все скрипты от корня -->
     <script src="/scripts/product-data.js" defer></script>
     <script src="/scripts/search.js" defer></script>
-<script src="/scripts/product-page.js" defer></script>
-<script src="/scripts/main.js" defer></script>
-<script src="/scripts/products.js" defer></script>
-<script src="/scripts/cart.js" defer></script>
-
+    <script src="/scripts/product-page.js" defer></script>
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/products.js" defer></script>
+    <script src="/scripts/cart.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -47,7 +50,6 @@
                         <button class="search__form-btn">
                             <img class="search__form-img" src="/icons/search.svg" alt="">
                         </button>
-                        <!-- Переместили внутрь .search -->
                         <div class="search-results"></div>
                     </div>
                     <div class="header__middle-right">
@@ -73,6 +75,7 @@
                             <img src="/icons/sales.svg" alt="">
                             Акции
                         </a>
+                        <!-- ИСПРАВЛЕНО: ссылки на страницы каталога -->
                         <a href="/Pages/mixers.html" class="menu__bottom-item">Смесители</a>
                         <a href="/Pages/shower_systems.html" class="menu__bottom-item">Душевые системы</a>
                         <a href="/Pages/shower_racks.html" class="menu__bottom-item">Душевые стойки</a>
@@ -91,7 +94,6 @@
         </div>
     </header>
 
-
     <header class="header__mobile">
         <div class="header__middle__all">
             <div class="container">
@@ -102,7 +104,6 @@
                         <button class="search__form-btn">
                             <img class="search__form-img" src="/icons/search.svg" alt="">
                         </button>
-                        <!-- Переместили внутрь .search -->
                         <div class="search-results"></div>
                     </div>
                     <div class="header__middle-right">
@@ -122,6 +123,7 @@
             </div>
         </div>
     </header>
+    
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu__content">
             <div class="mobile__top">
@@ -133,11 +135,12 @@
                     Каталог
                 </div>
                 <div class="catalog-links">
-                    <a href="#">Смесители</a>
-                    <a href="#">Душевые системы</a>
-                    <a href="#">Душевые стойки</a>
-                    <a href="#">Изливы</a>
-                    <a href="#">Аксессуары</a>
+                    <!-- ИСПРАВЛЕНО: ссылки на страницы каталога -->
+                    <a href="/Pages/mixers.html">Смесители</a>
+                    <a href="/Pages/shower_systems.html">Душевые системы</a>
+                    <a href="/Pages/shower_racks.html">Душевые стойки</a>
+                    <a href="/Pages/spouts.html">Изливы</a>
+                    <a href="/Pages/accessories.html">Аксессуары</a>
                 </div>
             </nav>
 
@@ -163,8 +166,6 @@
                 <p>Личный кабинет</p>
             </a>
 
-
-
             <div class="mobile-menu__user">
                 <a href="tel:79999999999" class="mobile-menu__phone">+7 999 999-99-99</a>
                 <div class="text-mobile">
@@ -174,16 +175,14 @@
                     </p>
                 </div>
             </div>
-                <a href="#" data-modal-open class="button__right-mobile">Заказать звонок</a>
-                <a href="#" class="whatsapp">
-                    <img class="logo__footer" src="/icons/whatsapp.svg" alt="">
-                    <span>Написать в WhatsApp</span>
-                </a>
+            <a href="#" data-modal-open class="button__right-mobile">Заказать звонок</a>
+            <a href="#" class="whatsapp">
+                <img class="logo__footer" src="/icons/whatsapp.svg" alt="">
+                <span>Написать в WhatsApp</span>
+            </a>
         </div>
-
-
-
     </div>
+    
     <div class="container">
         <div class="modal">
             <div class="modal__box">
@@ -203,18 +202,13 @@
         </div>
     </div>
 
-
-
-
-
-
-<div class="container">
-    <div class="navigation" data-nav-items>
-        <!-- Хлебные крошки будут заполнены динамически -->
+    <div class="container">
+        <div class="navigation" data-nav-items>
+            <!-- Хлебные крошки будут заполнены динамически -->
+        </div>
     </div>
-</div>
 
- <div class="product-page">
+    <div class="product-page">
         <div class="container">
             <div class="product">
                 <!-- Левая часть: Галерея -->
@@ -249,12 +243,10 @@
                             </div>
                         </div>
                         <div class="product-buy-box">
-
                             <div class="product-buy">
                                 <div class="price"></div>
                                 <div class="product-buy-buttons"></div>
                             </div>
-
                             <p class="note">
                                 Цена действительна только для интернет-магазина и может отличаться от цен в розничных магазинах.
                             </p>
@@ -268,13 +260,8 @@
     <section class="product__description">
         <div class="container">
             <div class="description__all">
-                <div class="description">
-
-                </div>
-
-                <div class="equipment">
-
-                </div>
+                <div class="description"></div>
+                <div class="equipment"></div>
             </div>
         </div>
     </section>
@@ -287,7 +274,6 @@
                     <div class="swiper-wrapper">
                         <!-- Слайды будут здесь -->
                     </div>
-                    <!-- Кнопки навигации -->
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
@@ -302,21 +288,11 @@
                     <div class="swiper-wrapper">
                         <!-- Слайды будут здесь -->
                     </div>
-                    <!-- Кнопки навигации -->
                     <div class="swiper-pagination recommended-pagination"></div>
                 </div>
             </div>
         </div>
     </section>
-
-
-
-
-
-
-
-
-
 
     <section class="form">
         <div class="container">
@@ -338,7 +314,6 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__items">
-
                 <div class="info">
                     <img src="/icons/logo.svg" alt="">
                     <a href="#" class="whatsapp">
@@ -350,11 +325,12 @@
                 <div class="item__catalog">
                     <p class="catalog__title">КАТАЛОГ</p>
                     <nav class="items__catalog">
-                        <a href="#" class="catalog__item">Смесители</a>
-                        <a href="#" class="catalog__item">Душевые системы</a>
-                        <a href="#" class="catalog__item">Душевые стойки</a>
-                        <a href="#" class="catalog__item">Изливы</a>
-                        <a href="#" class="catalog__item">Аксессуары</a>
+                        <!-- ИСПРАВЛЕНО: ссылки на страницы каталога -->
+                        <a href="/Pages/mixers.html" class="catalog__item">Смесители</a>
+                        <a href="/Pages/shower_systems.html" class="catalog__item">Душевые системы</a>
+                        <a href="/Pages/shower_racks.html" class="catalog__item">Душевые стойки</a>
+                        <a href="/Pages/spouts.html" class="catalog__item">Изливы</a>
+                        <a href="/Pages/accessories.html" class="catalog__item">Аксессуары</a>
                     </nav>
                 </div>
 
@@ -377,7 +353,6 @@
                             Подписаться
                             <img src="/icons/arrow_sales.svg" alt="">
                         </a>
-
                     </div>
                     <a href="tel:79999999999" class="connection__phone">+7 999 999-99-99</a>
                     <p class="connection__address">
@@ -399,21 +374,13 @@
         </div>
     </footer>
 
-
-
-
-
-
-
-
-
     <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- Initialize Swiper -->
-  <script>
-    // Инициализация будет происходить в product-page.js
-    var swiper;
-</script>
+    <!-- Initialize Swiper -->
+    <script>
+        // Инициализация будет происходить в product-page.js
+        var swiper;
+    </script>
 </body>
 </html>
