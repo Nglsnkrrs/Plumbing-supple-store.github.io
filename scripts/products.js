@@ -51,7 +51,7 @@ function renderProductCard(data) {
 
 // ===== Открытие страницы товара =====
 function openProductPage(article) {
-    window.location.href = `/Pages/product.html?article=${article}`;
+    window.location.href = `/Plumbing-supple-store.github.io/Pages/product.html?article=${article}`;
 }
 
 // ===== Определяем тип текущей страницы =====
@@ -154,9 +154,9 @@ function initBreadcrumbs() {
     if (!nav) return;
 
     if (namePage === 'Каталог') {
-        nav.innerHTML = `<a href="/index.html" class="navigation__item nav-unactive">Главная</a><span>/</span><a href="#" class="navigation__item navigation__item--current nav-active">${namePage}</a>`;
+        nav.innerHTML = `<a href="/Plumbing-supple-store.github.io/index.html" class="navigation__item nav-unactive">Главная</a><span>/</span><a href="#" class="navigation__item navigation__item--current nav-active">${namePage}</a>`;
     } else {
-        nav.innerHTML = `<a href="/index.html" class="navigation__item nav-unactive">Главная</a><span>/</span><a href="./catalog.html" class="navigation__item nav-unactive">Каталог</a><span>/</span><a href="#" class="navigation__item navigation__item--current nav-active">${namePage}</a>`;
+        nav.innerHTML = `<a href="/Plumbing-supple-store.github.io/index.html" class="navigation__item nav-unactive">Главная</a><span>/</span><a href="/Plumbing-supple-store.github.io/catalog.html" class="navigation__item nav-unactive">Каталог</a><span>/</span><a href="#" class="navigation__item navigation__item--current nav-active">${namePage}</a>`;
     }
 }
 
@@ -300,3 +300,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
