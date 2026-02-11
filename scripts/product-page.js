@@ -130,7 +130,7 @@ function updateBreadcrumbs(product) {
     const categoryName = categoryMap[product.typeProduct] || 'Каталог';
     const categoryUrl = getCategoryUrl(product.typeProduct);
 
-    nav.innerHTML = `<a href="../index.html" class="navigation__item nav-unactive">Главная</a><span>/</span><a href="catalog.html" class="navigation__item nav-unactive">Каталог</a><span>/</span><a href="${categoryUrl}" class="navigation__item nav-unactive">${categoryName}</a><span>/</span><a href="#" class="navigation__item navigation__item--current nav-active">${product.title}</a>`;
+    nav.innerHTML = `<a href="../index.html" class="navigation__item nav-unactive">Главная</a><span>/</span><a href="/Pages/catalog.html" class="navigation__item nav-unactive">Каталог</a><span>/</span><a href="${categoryUrl}" class="navigation__item nav-unactive">${categoryName}</a><span>/</span><a href="#" class="navigation__item navigation__item--current nav-active">${product.title}</a>`;
 }
 
 function getCategoryUrl(type) {
@@ -325,5 +325,6 @@ function showError(msg){
     const container=document.querySelector('.product-page-container');
     if(container) container.innerHTML=`<div class="error">${msg}</div>`;
 }
+
 
 
